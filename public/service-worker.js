@@ -1,5 +1,11 @@
-const CACHE = 'jks-leads-v1';
-const APP_SHELL = ['/', '/manifest.webmanifest'];
+const CACHE = 'jks-leads-v1.0.1';
+const APP_SHELL = [
+  '/',
+  '/manifest.webmanifest',
+  '/icons/JKS%20LEADS%20icon-192.jpg',
+  '/icons/JKS%20LEADS%20icon-512.jpg',
+  '/icons/JKS%20LEADS%20icon-maskable-512.jpg'
+];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(APP_SHELL)));

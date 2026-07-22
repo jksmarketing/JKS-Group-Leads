@@ -4,7 +4,7 @@ import { ExternalLink, FileText, Info, Settings, Smartphone, Download } from 'lu
 type Page = 'form' | 'settings';
 
 const FORM_URL = (import.meta.env.VITE_FORM_URL as string | undefined)?.trim() ||
-  '<iframe src="https://forms.monday.com/forms/embed/e72857ae9227d7f23bf3c445252a7de5?r=euc1" width="650" height="500" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>';
+  'https://forms.monday.com/forms/REPLACE_WITH_YOUR_FORM_URL';
 
 function App() {
   const [page, setPage] = useState<Page>(() => (location.hash === '#settings' ? 'settings' : 'form'));
@@ -24,7 +24,7 @@ function App() {
     };
   }, []);
 
-  const formConfigured = useMemo(() => !FORM_URL.includes('<iframe src="https://forms.monday.com/forms/embed/e72857ae9227d7f23bf3c445252a7de5?r=euc1" width="650" height="500" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>'), []);
+  const formConfigured = useMemo(() => !FORM_URL.includes('REPLACE_WITH_YOUR_FORM_URL'), []);
 
   const go = (next: Page) => {
     location.hash = next === 'settings' ? 'settings' : '';
