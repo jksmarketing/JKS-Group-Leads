@@ -64,16 +64,10 @@ function App() {
               loading="eager"
               allow="camera; microphone; clipboard-read; clipboard-write"
             />
-            <div className="fallback-bar">
-              <a className="secondary-button" href={FORM_URL} target="_blank" rel="noreferrer">
-                <ExternalLink size={18} /> Open form directly
-              </a>
-            </div>
           </section>
         ) : (
           <section className="settings-page">
             <header className="brand-header">
-              <div className="logo-text">JKS</div>
               <h1>JKS Group Leads</h1>
               <p>Version 1.0.0</p>
             </header>
