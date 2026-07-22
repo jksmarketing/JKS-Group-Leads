@@ -7,7 +7,7 @@ A small installable PWA that embeds the official JKS monday.com lead form. The w
 Recommended: set this Cloudflare Pages build environment variable:
 
 ```text
-VITE_FORM_URL=https://forms.monday.com/forms/your-real-form-url
+VITE_FORM_URL=<iframe src="https://forms.monday.com/forms/embed/e72857ae9227d7f23bf3c445252a7de5?r=euc1" width="650" height="500" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>
 ```
 
 Alternatively, replace the placeholder in `src/App.tsx`.
