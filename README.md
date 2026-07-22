@@ -6,7 +6,7 @@ A small installable PWA that embeds the official JKS monday.com lead form. The w
 
 Recommended: set this Cloudflare Pages build environment variable:
 
-```text
+```text 
 VITE_FORM_URL=https://forms.monday.com/forms/your-real-form-url
 ```
 
