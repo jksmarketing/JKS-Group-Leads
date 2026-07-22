@@ -1,13 +1,22 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ExternalLink, FileText, Info, Settings, Smartphone, Download } from 'lucide-react';
+import {
+  ExternalLink,
+  FileText,
+  Info,
+  Settings,
+  Smartphone,
+  Download,
+} from 'lucide-react';
 
 type Page = 'form' | 'settings';
 
-const FORM_URL = (import.meta.env.VITE_FORM_URL as string | undefined)?.trim() ||
-  'https://forms.monday.com/forms/embed/e72857ae9227d7f23bf3c445252a7de5?r=euc1';]
+const FORM_URL =
+  'https://forms.monday.com/forms/embed/e72857ae9227d7f23bf3c445252a7de5?r=euc1';
 
 function App() {
-  const [page, setPage] = useState<Page>(() => (location.hash === '#settings' ? 'settings' : 'form'));
+  const [page, setPage] = useState<Page>(() =>
+    location.hash === '#settings' ? 'settings' : 'form',
+  );
   const [installPrompt, setInstallPrompt] = useState<any>(null);
 
   useEffect(() => {
